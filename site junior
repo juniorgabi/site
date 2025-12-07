@@ -1,0 +1,427 @@
+# Projeto: Site Responsivo - Protótipo 1º Bimestre
+
+Este documento contém todos os arquivos do projeto organizados como blocos de código. Copie cada bloco para o arquivo correspondente na sua estrutura de pastas.
+
+---
+
+## Estrutura de pastas sugerida
+
+```
+meu-site/
+├── index.html
+├── equipe.html
+├── css/
+│   └── estilo.css
+├── js/
+│   └── script.js
+├── img/
+│   ├── logo.png
+│   ├── destaque1.jpg
+│   ├── destaque2.jpg
+│   ├── destaque3.jpg
+│   ├── equipe1.jpg
+│   └── depoimento1.jpg
+└── assets/
+    └── mapa.html
+```
+
+---
+
+## index.html
+
+```html
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica VetCare - Protótipo</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo.png" alt="logo" class="me-2" width="40" height="40">
+        <span>VetCare</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+        </ul>
+        <div class="d-flex ms-3">
+          <a class="nav-link text-white" href="#"><i class="fab fa-facebook"></i></a>
+          <a class="nav-link text-white" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link text-white" href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Carousel -->
+  <header id="home" class="mb-5">
+    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/destaque1.jpg" class="d-block w-100" alt="destaque1">
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>Bem-vindo à VetCare</h1>
+            <p>Cuidados veterinários com amor e tecnologia.</p>
+            <a href="#contato" class="btn btn-lg btn-light">Agende uma consulta</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/destaque2.jpg" class="d-block w-100" alt="destaque2">
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>Serviços completos</h1>
+            <p>Consultas, vacinas, exames e hospedagem.</p>
+            <a href="#produtos" class="btn btn-lg btn-light">Conheça nossos serviços</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/destaque3.jpg" class="d-block w-100" alt="destaque3">
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>Equipe especializada</h1>
+            <p>Profissionais capacitados e apaixonados por animais.</p>
+            <a href="equipe.html" class="btn btn-lg btn-light">Nossa equipe</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sobre nós -->
+    <section id="sobre" class="mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sobre nós</h2>
+          <p>VetCare é uma clínica fictícia criada como projeto do 1º bimestre. Nosso objetivo é oferecer atendimento integral aos pets com tecnologia, carinho e compromisso.</p>
+          <p>Missão: Promover saúde e bem-estar animal. Visão: Ser referência na região. Valores: Ética, amor e inovação.</p>
+          <!-- Accordion 1 -->
+          <div class="accordion" id="accordionSobre">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Nossa História</button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionSobre">
+                <div class="accordion-body">A VetCare nasceu de um projeto acadêmico e cresceu como um protótipo funcional para aprendizagem.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Nossos Valores</button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSobre">
+                <div class="accordion-body">Prioridade no bem-estar animal, atendimento humanizado e uso de tecnologia.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/destaque2.jpg" alt="sobre" class="img-fluid rounded">
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos / Serviços -->
+    <section id="produtos" class="mb-5">
+      <h2>Produtos e Serviços</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/destaque1.jpg" class="card-img-top" alt="servico1">
+            <div class="card-body">
+              <h5 class="card-title">Consultas</h5>
+              <p class="card-text">Atendimento clínico com avaliação completa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/destaque2.jpg" class="card-img-top" alt="servico2">
+            <div class="card-body">
+              <h5 class="card-title">Vacinação</h5>
+              <p class="card-text">Calendário de vacinas para todas as idades.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="img/destaque3.jpg" class="card-img-top" alt="servico3">
+            <div class="card-body">
+              <h5 class="card-title">Exames e Diagnóstico</h5>
+              <p class="card-text">Exames laboratoriais e imagem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion 2 -->
+      <div class="mt-4">
+        <div class="accordion" id="accordionServicos">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="serv1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#servCollapse1">Planos de Saúde Pet</button>
+            </h2>
+            <div id="servCollapse1" class="accordion-collapse collapse" data-bs-parent="#accordionServicos">
+              <div class="accordion-body">Escolha entre planos básicos e completos.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="serv2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#servCollapse2">Hospedagem</button>
+            </h2>
+            <div id="servCollapse2" class="accordion-collapse collapse" data-bs-parent="#accordionServicos">
+              <div class="accordion-body">Ambiente seguro e monitorado para o seu pet.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Depoimentos (carousel) -->
+    <section id="depoimentos" class="mb-5">
+      <h2>Depoimentos</h2>
+      <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center p-4">
+              <img src="img/depoimento1.jpg" class="rounded-circle mb-3" width="120" height="120" alt="cliente1">
+              <blockquote class="blockquote text-center">"Ótimo atendimento! Recomendo a VetCare."</blockquote>
+              <figcaption class="blockquote-footer">Maria, dona do Thor</figcaption>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center p-4">
+              <img src="img/equipe1.jpg" class="rounded-circle mb-3" width="120" height="120" alt="cliente2">
+              <blockquote class="blockquote text-center">"Equipe super atenciosa e competente."</blockquote>
+              <figcaption class="blockquote-footer">João, dono da Luna</figcaption>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonials" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="mb-5">
+      <h2>Contato</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+              <div class="invalid-feedback">Por favor, informe seu nome.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Por favor, informe um email válido.</div>
+            </div>
+            <div class="mb-3">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+              <div class="invalid-feedback">Por favor, escreva uma mensagem.</div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <!-- Google Maps embed via assets/mapa.html -->
+          <iframe src="assets/mapa.html" title="mapa" class="w-100" style="height:350px;border:0;"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>&copy; 2025 VetCare - Projeto 1º Bimestre</div>
+      <div>
+        <a class="text-white me-3" href="#"><i class="fab fa-facebook"></i></a>
+        <a class="text-white me-3" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="text-white" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+```
+
+---
+
+## equipe.html
+
+```html
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipe - VetCare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VetCare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="mb-4">Nossa Equipe</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card text-center h-100">
+          <img src="img/equipe1.jpg" class="card-img-top" alt="medico1">
+          <div class="card-body">
+            <h5 class="card-title">Dra. Ana Silva</h5>
+            <p class="card-text">Médica-veterinária - CRMV: 0000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <img src="img/equipe1.jpg" class="card-img-top" alt="medico2">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Pedro Souza</h5>
+            <p class="card-text">Especialista em cirurgia e odontologia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center h-100">
+          <img src="img/equipe1.jpg" class="card-img-top" alt="atendente">
+          <div class="card-body">
+            <h5 class="card-title">Camila Rodrigues</h5>
+            <p class="card-text">Atendimento e administração.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">&copy; 2025 VetCare</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
+---
+
+## css/estilo.css
+
+```css
+:root{
+  --brand: #0d6efd; /* Azul padrão do Bootstrap - troque pelas cores da logo se quiser */
+  --accent: #0b5ed7;
+}
+body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+.navbar-brand img{border-radius:8px}
+.carousel-caption{background: rgba(0,0,0,0.35); padding:1rem; border-radius:8px}
+.card img{object-fit:cover; height:200px}
+footer{font-size:0.9rem}
+
+/* Estilos responsivos adicionais */
+@media (max-width:768px){
+  .carousel-caption{display:block; text-align:center}
+}
+```
+
+---
+
+## js/script.js
+
+```javascript
+// Validação simples do formulário usando classes do Bootstrap
+(function(){
+  'use strict'
+  const form = document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit', function(event){
+    if(!form.checkValidity()){
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      event.preventDefault();
+      // Aqui você pode integrar envio via fetch/AJAX ou mostrar modal
+      alert('Mensagem enviada! (simulação)');
+      form.reset();
+    }
+    form.classList.add('was-validated');
+  }, false);
+})();
+```
+
+---
+
+## assets/mapa.html
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body style="margin:0">
+    <!-- Exemplo de iframe do Google Maps (substitua pelo embed da localização real) -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1234567890123!2d-46.6333083845000!3d-23.5505200000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2b0f0f0%3A0x123456789abcdef!2sPra%C3%A7a%20da%20Rep%C3%BAblica%2C%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v0000000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </body>
+</html>
+```
+
+---
+
+
